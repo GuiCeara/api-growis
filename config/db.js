@@ -1,16 +1,21 @@
 import { createPool } from 'mysql2/promise';
 
+// arrumar o .env
+
 const db = createPool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT, 
-    user: process.env.DB_USER,
+    user: 'root',
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    database: 'growis',                           // process.env.DB_NAME
 });
 
 (async () => {
     try {
         const connection = await db.getConnection();
+        console.log(process.env.DB_HOST);
+        console.log(process.env.DB_PORT);
+        console.log(process.env.DB_PASSWORD);
         console.log('Conexão bem-sucedida ao banco de dados!');
         connection.release();
     } catch (err) {

@@ -1,6 +1,7 @@
 import express from 'express';
-import productRoutes from './routes/productRoutes.js'; // É necessário adicionar a extensão '.js'
+import productRoutes from './routes/productRoutes.js';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const app = express();
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use('/api', productRoutes);
 
 // Porta do servidor
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });

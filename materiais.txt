@@ -1,0 +1,54 @@
+1. Sensores
+Sensores de Temperatura e Umidade
+
+DHT22 ou AM2302: Sensores para medir temperatura e umidade.
+BME280: Sensor combinado de temperatura, umidade e pressão.
+Sensores de Luz
+
+LDR (Light Dependent Resistor): Para medir a intensidade da luz.
+TSL2561: Sensor de luz digital.
+Sensores de CO2
+
+MH-Z19: Sensor de CO2.
+Sensores de pH do Solo
+
+Sensor de pH do Solo (SEN0161): Para medir a acidez ou alcalinidade do solo.
+Sensores de Umidade do Solo
+
+Sensor Capacitivo de Umidade do Solo: Medir a umidade do solo sem corrosão.
+2. Atuadores
+Sistema de Irrigação
+
+Válvulas Solenóides: Para controlar o fluxo de água.
+Bombas de Água: Para fornecer água para a estufa.
+Ventiladores
+
+Ventiladores de Circulação: Para garantir a boa ventilação e circulação do ar.
+Aquecedores
+
+Aquecedores Elétricos: Para aquecer a estufa quando necessário.
+Iluminação Artificial
+
+Lâmpadas LED de Crescimento: Para suplementar a luz solar.
+Sistema de Sombras e Cortinas
+
+---
+
+https://www.amazon.com.br/interna-port%C3%A1til-jardinagem-dobr%C3%A1vel-prateleira/dp/B09294S232?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2R86E0AUIIX5Q 
+Estrutura
+
+
+**Materiais e Equipamentos para Estufa Inteligente**
+
+1. **Iluminação**
+   - Led Grow 300 LEDs Full Spectrum Indoor Floração E27 Bivolt: R$76
+
+2. **Ventilação**
+   - Ventilador de casa: Gratuito (verifique se atende às necessidades de circulação de ar da estufa)
+
+3. **Aquecimento**
+   - Aquecedor Doméstico Quartzo AQ-02 800W Premium Ventisol 127V: R$78 (verifique se é suficiente para a estufa)
+
+4. **Umidificação**
+   - Umidificador de casa: Gratuito (verifique se é adequado para a estufa)
+

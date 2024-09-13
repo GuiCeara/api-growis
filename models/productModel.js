@@ -20,6 +20,21 @@ export const getProductById = async (id) => {
     }
 };
 
+// Função para inserir um novo produto
+export const insertProduct = async (data) => {
+    const { nome, categoria, umidade, temperatura, dataPlantio } = data;
+    try {
+        const result = await db.query(
+            'INSERT INTO produtos (nome, categoria, umidade, temperatura, dataPlantio) VALUES (?, ?, ?, ?, ?)',
+            [nome, categoria, umidade, temperatura, dataPlantio]
+        );
+        return result.insertId;  // Retorna o ID do novo produto inserido
+    } catch (err) {
+        throw new Error(`Erro ao inserir produto: ${err.message}`);
+    }
+};
+
+
 // Função para atualizar um produto
 export const updateProduct = async (id, data) => {
     const { nome, categoria, umidade, temperatura, dataPlantio } = data;

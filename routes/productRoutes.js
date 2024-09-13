@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllProducts, getProduct, updateProductDetails } from '../controllers/productController.js';
+import { getAllProducts, getProduct, updateProductDetails, createProduct } from '../controllers/productController.js';
 
 const router = express.Router();
 
@@ -11,5 +11,8 @@ router.get('/products/:id', getProduct);
 
 // Rota para atualizar um produto
 router.put('/products/:id', updateProductDetails);
+
+// Rota para criar um novo produto
+router.post('/products', createProduct);
 
 export default router;

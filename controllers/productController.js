@@ -1,4 +1,4 @@
-import { getProducts, getProductById, updateProduct } from '../models/productModel.js';
+import { getProducts, getProductById, insertProduct, updateProduct } from '../models/productModel.js';
 
 // Obter todos os produtos
 export const getAllProducts = async (req, res) => {
@@ -22,6 +22,17 @@ export const getProduct = async (req, res) => {
         }
     } catch (err) {
         res.status(500).send(`Erro ao buscar produto: ${err.message}`);
+    }
+};
+
+// Inserir um novo produto
+export const createProduct = async (req, res) => {
+    const { nome, categoria, umidade, temperatura, dataPlantio } = req.body;
+    try {
+        const newProductId = await insertProduct({ nome, categoria, umidade, temperatura, dataPlantio });
+        res.status(201).json({ message: 'Produto inserido com sucesso', id: newProductId });
+    } catch (err) {
+        res.status(500).send(`Erro ao inserir produto: ${err.message}`);
     }
 };
 

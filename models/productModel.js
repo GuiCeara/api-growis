@@ -22,11 +22,11 @@ export const getProductById = async (id) => {
 
 // Função para inserir um novo produto
 export const insertProduct = async (data) => {
-    const { nome, categoria, umidade, temperatura, dataPlantio } = data;
+    const { nome, categoria, umidade, temperatura, dataPlantio, fk_estufa_id } = data;
     try {
         const result = await db.query(
-            'INSERT INTO produtos (nome, categoria, umidade, temperatura, dataPlantio) VALUES (?, ?, ?, ?, ?)',
-            [nome, categoria, umidade, temperatura, dataPlantio]
+            'INSERT INTO produtos (nome, categoria, umidade, temperatura, dataPlantio, fk_estufa_id) VALUES (?, ?, ?, ?, ?, ?)',
+            [nome, categoria, umidade, temperatura, dataPlantio, fk_estufa_id]
         );
         return result.insertId;  // Retorna o ID do novo produto inserido
     } catch (err) {
@@ -37,7 +37,7 @@ export const insertProduct = async (data) => {
 
 // Função para atualizar um produto
 export const updateProduct = async (id, data) => {
-    const { nome, categoria, umidade, temperatura, dataPlantio } = data;
+    const { nome, categoria, umidade, temperatura, dataPlantio,  } = data;
     try {
         const result = await db.query(
             'UPDATE produtos SET nome = ?, categoria = ?, umidade = ?, temperatura = ?, dataPlantio = ? WHERE id = ?',

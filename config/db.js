@@ -1,5 +1,7 @@
 import { createPool } from 'mysql2/promise';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // arrumar o .env
 
 const db = createPool({

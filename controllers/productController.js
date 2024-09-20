@@ -27,9 +27,9 @@ export const getProduct = async (req, res) => {
 
 // Inserir um novo produto
 export const createProduct = async (req, res) => {
-    const { nome, categoria, umidade, temperatura, dataPlantio } = req.body;
+    const { nome, categoria, umidade, temperatura, dataPlantio, fk_estufa_id } = req.body;
     try {
-        const newProductId = await insertProduct({ nome, categoria, umidade, temperatura, dataPlantio });
+        const newProductId = await insertProduct({ nome, categoria, umidade, temperatura, dataPlantio, fk_estufa_id });
         res.status(201).json({ message: 'Produto inserido com sucesso', id: newProductId });
     } catch (err) {
         res.status(500).send(`Erro ao inserir produto: ${err.message}`);
